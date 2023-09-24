@@ -13,6 +13,8 @@ namespace FriendLetter
       builder.Services.AddControllersWithViews();
       // configures how we want our host to handle requests
       WebApplication app = builder.Build();
+      // developer exception pages
+      app.UseDeveloperExceptionPage();
 
       app.UseRouting();
 
