@@ -15,6 +15,9 @@ namespace FriendLetter
       WebApplication app = builder.Build();
       // developer exception pages
       app.UseDeveloperExceptionPage();
+      // redirects to https when accessed via http
+      app.UseHttpsRedirection();
+
 
       app.UseRouting();
 
