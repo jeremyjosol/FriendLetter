@@ -11,7 +11,7 @@ namespace FriendLetter
       WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
       builder.Services.AddControllersWithViews();
-
+      // configures how we want our host to handle requests
       WebApplication app = builder.Build();
 
       app.UseRouting();
@@ -20,7 +20,7 @@ namespace FriendLetter
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}"
       );
-
+      // runs our host
       app.Run();
     }
   }
